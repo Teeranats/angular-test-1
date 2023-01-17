@@ -1,0 +1,155 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 200px;
+
+    h1 {
+        text-align: center;
+    }
+
+    .status {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        justify-content: space-between;
+
+        .input-tax {
+            align-content: center;
+            width: 200px;
+
+            .num {
+                border-style: solid;
+                text-align: center;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                padding: 5px;
+                margin: auto auto;
+
+                p {
+                    margin: 0px;
+
+                    font-size:10px;
+                    margin-left: auto;
+                    margin-right: auto;
+
+
+
+
+                }
+
+            }
+
+            p {
+                width: fit-content;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        .review-confirm {
+            width: 200px;
+
+            .num {
+                border-style: solid;
+                text-align: center;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                padding: 5px;
+                margin: auto auto;
+
+                p {
+                    margin: 0px;
+
+                    font-size: 10px;
+                    margin-left: auto;
+                    margin-right: auto;
+
+
+                }
+
+            }
+
+            p {
+                width: fit-content;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    .box-container {
+        width: 80%;
+        height: 90%;
+        background-color: rgb(221, 221, 220);
+        display: flex;
+        flex-direction: column;
+        margin: 10px auto;
+        padding: 80px;
+
+        .sub-title1 {
+            // .line {
+            //     width: 100%;
+            //     height: 1px;
+            //     background-color: rgb(141, 141, 141);
+            // }
+        }
+
+        .type-filing {
+
+            margin: 10px ;
+
+            h4 {
+                // margin-right: 550px;
+                
+            }
+        }
+
+        .vat-month {
+            display: flex;
+            flex-direction: row;
+            justify-content: baseline;
+        }
+
+        .tax-computaion {
+            .sub-title2 {
+              
+            }
+
+        }
+
+        .total-tax {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            p{
+                margin-top:20px;
+            }
+
+        }
+        .total-vat{
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+
+    }
+    .description{
+        margin-top: 5px;
+    }
+
+    .line {
+        width: 100%;
+        height: 1px;
+        background-color: rgb(141, 141, 141);
+    }
+}

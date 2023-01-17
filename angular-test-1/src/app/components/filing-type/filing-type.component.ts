@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./filing-type.component.scss']
 })
 export class FilingTypeComponent {
+  onChange(data:any){
+    console.log(data.target.value);
+    // this.service.type_filing = data.target.value
 
+    
+  }
 }

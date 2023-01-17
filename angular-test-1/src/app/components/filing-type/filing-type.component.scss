@@ -1,0 +1,18 @@
+.radio{
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    // align-content: space-between;
+    gap: 30px;
+    .ordinary-Filing{
+        display: flex;
+        flex-direction: row;
+        justify-content: baseline;
+        align-content: space-between;
+    }
+    .additional-Filing{
+        display: flex;
+        flex-direction: row;
+        justify-content: baseline;
+    }
+}
