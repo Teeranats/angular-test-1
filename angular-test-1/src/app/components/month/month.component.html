@@ -1,9 +1,9 @@
-<div class="Vat">
+<!-- <div class="Vat">
     <select name="month" id="month">
     <option value="January">January</option>
     <option value="February">February</option>
     <option value="March">March</option>
-    <option value="April ">April </option>
+    <option value="April">April </option>
     <option value="May ">May</option>
     <option value="June">June</option>
     <option value="July">July</option>
@@ -13,4 +13,27 @@
     <option value="November">November</option>
     <option value="December">December</option>
   </select>
+</div> -->
+<div class="Vat">
+    <div class="col">
+        <div ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-outline-dark" id="dropdownBasic1" ngbDropdownToggle>
+                {{selectedValue}}
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button ngbDropdownItem (click)="selectOption('January')">January</button>
+                <button ngbDropdownItem (click)="selectOption('February')">February</button>
+                <button ngbDropdownItem (click)="selectOption('March')">March</button>
+                <button ngbDropdownItem (click)="selectOption('April')">April</button>
+                <button ngbDropdownItem (click)="selectOption('May')">May </button>
+                <button ngbDropdownItem (click)="selectOption('June')">June</button>
+                <button ngbDropdownItem (click)="selectOption('July')">July</button>
+                <button ngbDropdownItem (click)="selectOption('August')">August</button>
+                <button ngbDropdownItem (click)="selectOption('September')">September</button>
+                <button ngbDropdownItem (click)="selectOption('November')">November</button>
+                <button ngbDropdownItem (click)="selectOption('October')">October</button>
+                <button ngbDropdownItem (click)="selectOption('December')">December</button>
+            </div>
+        </div>
+    </div>
 </div>

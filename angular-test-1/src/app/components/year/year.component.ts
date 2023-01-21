@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class YearComponent {
 
+  selectedValue: string = '2020';
+  selectOption(value: any) {
+    this.selectedValue = value;
+  }
 }

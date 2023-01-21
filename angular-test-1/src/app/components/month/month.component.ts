@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class MonthComponent {
 
+  months :string[] = [
+    'January','February','March','April',"May ","June","July","August","September","October","November","December"
+  ]
+  selectedValue: string = 'January';
+  selectOption(value: any) {
+    this.selectedValue = value;
+  }
 }

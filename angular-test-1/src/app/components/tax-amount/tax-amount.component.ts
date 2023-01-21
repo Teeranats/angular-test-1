@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ShereService } from "../../services/shere.service";
 
 @Component({
   selector: 'app-tax-amount',
@@ -6,6 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./tax-amount.component.scss']
 })
 export class TaxAmountComponent {
+
+  receivedMessage: string = '';
+
+  constructor(private service: ShereService) {
+    this.service.currentMessage.subscribe(message => this.receivedMessage = message);
+  }
+  
   total_of_tax: String = "";
   value_tax: String = "";
   ngOnInit(): void {
@@ -66,4 +74,5 @@ export class TaxAmountComponent {
     return this.commaSeparateNumber(float)
 
   }
+ 
 }
