@@ -6,10 +6,29 @@ import { Subject } from 'rxjs';
 })
 export class ShereService {
 
-  private messageSource = new Subject<string>();
+  private fillingType = new Subject<any>();
+  currentfilling = this.fillingType.asObservable();
+
+  private messageSource = new Subject<any>();
   currentMessage = this.messageSource.asObservable();
 
-  sendMessage(message: string) {
+  private month = new Subject<any>();
+  currentMonth = this.month.asObservable();
+
+  private year = new Subject<any>();
+  currentYear = this.year.asObservable();
+
+  sendFillingType(type:string){
+    this.fillingType.next(type)
+  }
+  sendMessage(message: Number) {
     this.messageSource.next(message);
   }
+  sendMonth(month:string){
+    this.month.next(month)
+  }
+  sendYear(year:string){
+    this.year.next(year)
+  }
+
 }

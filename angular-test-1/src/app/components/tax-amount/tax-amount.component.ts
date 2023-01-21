@@ -19,12 +19,12 @@ export class TaxAmountComponent {
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    let convertt = this.convert()
-    console.log(convertt);
-    console.log("this.total_of_tax ===",this.total_of_tax);
-    console.log("value_tax ===",this.value_tax);
+    // let convertt = this.convert()
+    // console.log(convertt);
+    // console.log("this.total_of_tax ===",this.total_of_tax);
+    // console.log("value_tax ===",this.value_tax);
     
-    this.no_comma
+    // this.no_comma
     
   }
   onKey(event:any) {const inputValue = event.target.value;

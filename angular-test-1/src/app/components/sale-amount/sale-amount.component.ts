@@ -42,8 +42,10 @@ export class SaleAmountComponent {
     let s = value
     s = s.replace(/,/g, '');
     this.value_tax = s;
-    this.service.sendMessage(s);
-    
+    let cal = Number(s);
+    let fixFloat = cal.toFixed(2)
+    let floatToNum = Number(fixFloat) * 0.07
+    this.service.sendMessage(floatToNum);
   }
   commaSeparateNumber(val: any) {
     // remove sign if negative
