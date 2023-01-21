@@ -17,9 +17,13 @@
 <div class="Vat">
     <div class="col">
         <div ngbDropdown class="d-inline-block">
-            <button type="button" class="btn btn-outline-dark" id="dropdownBasic1" ngbDropdownToggle>
-                {{selectedValue}}
+            <button *ngIf="selectedValue != '' " type="button" class="btn btn-outline-dark" id="dropdownBasic1" ngbDropdownToggle>
+               {{selectedValue}}
             </button>
+            <button *ngIf="selectedValue == '' " type="button" class="btn btn-outline-dark" id="dropdownBasic1" ngbDropdownToggle>
+                January
+             </button>
+
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
                 <button ngbDropdownItem (click)="selectOption('January')">January</button>
                 <button ngbDropdownItem (click)="selectOption('February')">February</button>

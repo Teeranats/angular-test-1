@@ -19,7 +19,12 @@ export class ShereService {
   currentYear = this.year.asObservable();
 
   sendFillingType(type:string){
-    this.fillingType.next(type)
+    if (!type) {
+      this.fillingType.next('0')
+    }else{
+      this.fillingType.next(type)
+    }
+    
   }
   sendMessage(message: Number) {
     this.messageSource.next(message);

@@ -15,7 +15,7 @@ export class MonthComponent {
   months :string[] = [
     'January','February','March','April',"May ","June","July","August","September","October","November","December"
   ]
-  selectedValue: string = 'January';
+  selectedValue: string = '';
   selectOption(value: any) {
     this.selectedValue = value;
     this.service.sendMonth(value)

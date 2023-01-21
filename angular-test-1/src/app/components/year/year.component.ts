@@ -7,7 +7,7 @@ import { ShereService } from '../../services/shere.service';
   styleUrls: ['./year.component.scss'],
 })
 export class YearComponent {
-  selectedValue: string = '2020';
+  selectedValue: string = '';
   constructor(private service: ShereService) {}
 
   selectOption(value: any) {

@@ -17,6 +17,7 @@ export class SaleAmountComponent {
   @Input() data:String = ""
   total_of_tax: String = "";
   value_tax: String = "";
+  
 
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
