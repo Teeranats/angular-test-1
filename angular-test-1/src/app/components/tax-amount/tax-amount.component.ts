@@ -28,7 +28,7 @@ export class TaxAmountComponent {
     
   }
   onKey(event:any) {const inputValue = event.target.value;
-    console.log("oney");
+    console.log("onkey");
     // this.value_tax = this.service.total_vat;
     
   this.no_comma(inputValue)
@@ -40,39 +40,5 @@ export class TaxAmountComponent {
     s = s.replace(/,/g, '');
     // this.value_tax = s
   }
-  commaSeparateNumber(val: any) {
-    // remove sign if negative
-    var sign = 1;
-    if (val < 0) {
-      sign = -1;
-      val = -val;
-    }
 
-    // trim the number decimal point if it exists
-    let num = val.toString().includes('.') ? val.toString().split('.')[0] : val.toString();
-
-    while (/(\d+)(\d{3})/.test(num.toString())) {
-      // insert comma to 4th last position to the match number
-      num = num.toString().replace(/(\d+)(\d{3})/, '$1' + ',' + '$2');
-    }
-
-    // add number after decimal point
-    if (val.toString().includes('.')) {
-      num = num + '.' + val.toString().split('.')[1];
-    }
-
-    // return result with - sign if negative
-    return sign < 0 ? this.total_of_tax =  '-' + num :this.total_of_tax = num;
-  }
-
-  convert() {
-    let number = 300000 / 4
-    let float = Math.round((number + Number.EPSILON) * 100) / 100
-    console.log("number == ", number);
-    console.log("commaa = = = ",this.commaSeparateNumber(float));
-    this.total_of_tax = this.commaSeparateNumber(float)
-    return this.commaSeparateNumber(float)
-
-  }
- 
 }

@@ -9,13 +9,18 @@ ShereService
 })
 export class AppComponent {
   title = 'angular-test-1';
+  typeFilling = '0'
   // selectedValue:string = 'kkk';
   constructor(private service : ShereService){    
-    this.service.currentfilling.subscribe(data => console.log("type filling from service",data)
+    this.service.currentfilling.subscribe(data => this.typeFilling = data
     );
 
     this.service.currentYear.subscribe(data => console.log("year from service",data)
-    );}
+    );
+    console.log('====================================');
+    console.log(this.typeFilling);
+    console.log('====================================');
+  }
   
     
   ngOnInit() {

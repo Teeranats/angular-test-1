@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./penalty.component.scss']
 })
 export class PenaltyComponent {
-
+  penalty:Number = 200.00;
 }

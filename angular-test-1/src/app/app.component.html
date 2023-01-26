@@ -9,6 +9,7 @@
       </div>
       <p>Input Tax</p>
     </div>
+    <div class="line"></div>
     <div class="review-confirm">
       <div class="num">
         <p>2</p>
@@ -18,7 +19,6 @@
   </div>
 
   <div class="box-container">
-
     <div class="sub-title1">
       <h3>1. Tax filing Detail</h3>
       <div class="line"></div>
@@ -38,25 +38,37 @@
         <h3>2. Tax Computation</h3>
         <div class="line"></div>
         <div class="description">
-          <h6>Provide total value taxable electronic service </h6>
+          <h6>Provide total value taxable electronic service</h6>
         </div>
       </div>
       <div class="row total-tax">
-        <p class='col-xl-9 col-lg-9  col-md-12' >1. Total value of taxable electronic service exclusive of VAT</p>
-        <app-sale-amount class='col-md-3'></app-sale-amount> 
+        <p class="col-xl-9 col-lg-9 col-md-12">
+          1. Total value of taxable electronic service exclusive of VAT
+        </p>
+        <app-sale-amount class="col-md-3"></app-sale-amount>
       </div>
       <div class="row">
-        <p class='col-xl-9 col-lg-9 col-md-12'>2. Total VAT to be remitted (7% of 1.)</p>
-        <app-tax-amount class='col-md-3'></app-tax-amount>
+        <p class="col-xl-9 col-lg-9 col-md-12">
+          2. Total VAT to be remitted (7% of 1.)
+        </p>
+        <app-tax-amount class="col-md-3"></app-tax-amount>
       </div>
 
-
-
+      <div *ngIf="typeFilling == '1'" class="addition">
+        <h6>In case of late filling and payment, or additionnal filling</h6>
+        <div class="row">
+          <p class="col-xl-9 col-lg-9 col-md-12">3. Surcharge</p>
+          <app-surcharge class="col-md-3"></app-surcharge>
+        </div>
+        <div class="row">
+          <p class="col-xl-9 col-lg-9 col-md-12">4. Penalty</p>
+          <app-penalty class="col-md-3"></app-penalty>
+        </div>
+      </div>
     </div>
-
-
-
-
   </div>
-
+  <div class="button">
+    <div class="back-button"><p>Back</p></div>
+    <div class="next-button"><p>Next</p> </div>
+  </div>
 </div>
